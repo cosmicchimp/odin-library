@@ -4,37 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="./libscript.js"></script>
     <link href="./styles.css" rel="stylesheet">
 </head> 
 
 <body>
     <div class="container">
         <div class="sidebar">
-            <form action="./libscript.js" id="bookInputForm" method="post">
+            <form action="#" id="bookInputForm" method="post">
                 <div class="inputDiv">
-                <label for="title" class="inputLabel">Title:</label>
-                <input type="text" placeholder="Title of book" name="title">
+                <label for="titleInput" class="inputLabel">Title:</label>
+                <input type="text" placeholder="Title of book" name="title" id="titleInput" required>
                 </div>
                 <div class="inputDiv">
                 <label for="author" class="inputLabel">Author:</label>
-                <input type="text" placeholder="Name of author" name="author">
+                <input type="text" placeholder="Name of author" id="author" required>
                 </div>
                 <div class="inputDiv">
-                <label for="numOfPage" class="inputLabel">Page Count:</label>
-                <input type="number" placeholder="# of pages" name="numOfPage">
+                <label for="pageInput" class="inputLabel">Page Count:</label>
+                <input type="number" placeholder="# of pages" name="numOfPage" id="pageInput" required>
                 </div>
                 <div class="inputDiv">
-                    <label for="readBefore" class="inputLabel">Have you read the book before?</label>
+                    <h2>Have you read the book before?</h2>
                     </div>
                     <div id="radioRow">
-                    <input type="radio" name="readBefore" id="radio1"style="height:20px; width:20px;">
+                    <input type="radio" name="readBefore" id="radio1"style="height:20px; width:20px;" required>
                     <label for="radio1">Yes</label>
-                    <input type="radio" name="readBefore" id="radio2"style="height:20px; width:20px;">
+                    <input type="radio" name="readBefore" id="radio2"style="height:20px; width:20px;" required>
                     <label for="radio2">No</label>
                 </div>
                 <div id="buttonDiv">
-                <button class="submitButton"><strong>ADD</strong></button>
+                <button id="submitButton" type="submit"><strong>ADD</strong></button>
                 <button class='clearButton' form='bookInputForm' type="reset"><strong>RESET</strong></button>
                 </div>
             </form>
@@ -45,4 +44,5 @@
         <div class="libBody"></div>
     </div>
 </body>
+<script src="./libscript.js"></script>
 </html>

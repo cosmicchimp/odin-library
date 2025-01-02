@@ -77,10 +77,10 @@ function pushObject() {
         const libBookDiv = document.createElement('div')
         libBookDiv.classList = 'libBookDiv'
         libBookDiv.id = `libBookDiv${index}`
-        libBookDiv.innerHTML = `<h1 class='divTitle'>Title: ${libBook.title}</h1>
+        libBookDiv.innerHTML = `<div><h2 class='divTitle'>Title: ${libBook.title}</h2>
         <h2 class='divTitle'>Author:${libBook.author}</h2>
-        <h2 class='divTitle'>Pages: ${libBook.page}</h2>
-        <div id='buttonBox'><button id='readButton${index}' class='readButton'>${libBook.read === false ? "Not Read" : "Read"}</button><button class='deleteButton' id='deleteDivButton${index}'>Delete</button></div>`
+        <h2 class='pageTitle'>Pages: ${libBook.page}</h2></div>
+        <div class='buttonBox'><button id='readButton${index}' class='readButton'>${libBook.read === false ? "Not Read" : "Read"}</button><button class='deleteButton' id='deleteDivButton${index}'>Delete</button></div>`
         libBody.appendChild(libBookDiv)
     })
 }

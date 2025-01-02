@@ -18,6 +18,11 @@
     background:linear-gradient(50deg, #2563eb, #4f46e5);
     padding:20px;
 }
+.inputDiv > h2 {
+    text-align:center;
+    margin-top:10px;
+    margin-bottom:10px;
+}
 .header {
     grid-column:2/3;
     grid-row:1/2;
@@ -34,8 +39,8 @@
     flex-direction:row;
     flex-wrap: wrap;
     box-sizing:border-box;
-    
-
+    gap:40px;
+    justify-content: center;
 }
 .inputDiv > input, .inputDiv > label {
     display:block;
@@ -103,19 +108,45 @@
     background-color:#ffffff;
     border-radius:10px;
 }
+
+.deleteButton:hover {
+    transform:scale(110%);
+    background-color:rgb(235, 24, 24);
+}
+.readButton:hover {
+    transform:scale(110%);
+    background-color:rgb(75, 198, 226);
+}
+.readButton:active, .deleteButton:active {
+    transform: scale(90%);
+}
 .libBookDiv {
     box-sizing:border-box;
-    background-color:antiquewhite;
+    background-color:rgb(0, 0, 0);
     border-top-left-radius: 10px;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 30px;
     border-top-right-radius: 30px;
-    height:clamp(5vh, 30vh, 40vh);
-    width:clamp(5vw, 15vw, 20vw);
-    justify-content:center;
-    align-content:center;
+    height:clamp(5vh, 35vh, 40vh);
+    width:clamp(5vw, 17.5vw, 20vw);
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    overflow-y:scroll;
+    color:white;
+    border:1px solid white;
+}
+.divTitle, .pageTitle {
+    padding:10px;
+}
+.buttonBox {
+    padding:10px;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+}
 
+.sideBar > h2 {
+    align-self:center;
 }
-#buttonBox {
-    gap:20px;
-}
+
